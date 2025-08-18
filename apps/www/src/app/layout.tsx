@@ -23,26 +23,29 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sendexa | Africa's Leading Communication APIs",
-    template: "%s | Sendexa",
+    default: "DS Online TV GH | Premier Media Production",
+    template: "%s | DS Online TV GH",
   },
-  description:
-    "Powering 10,000+ businesses with enterprise-grade SMS, WhatsApp, Email  APIs. 99.9% uptime, fastest delivery speeds, and developer-first tools.",
-  metadataBase: new URL("https://sendexa.co"),
-  alternates: {
-    canonical: "/",
-  },
+  description: "DS Online TV GH - Your premier media production company specializing in live streaming, video production, and broadcast services in Ghana.",
+  keywords: [
+    "Ghana media production",
+    "live streaming Ghana",
+    "video production",
+    "DS Online TV",
+    "broadcast services",
+    "event coverage Ghana"
+  ],
   openGraph: {
-    title: "Sendexa | All-in-One Platform for Communications ",
-    description:
-      "Everything to engage customers and collect payments across Africa. Get started with 10,000 free credits.",
-    url: "https://sendexa.co",
-    siteName: "Sendexa",
+    title: "DS Online TV GH | Premier Media Production",
+    description: "Professional media production services in Ghana - live streaming, video production, and broadcast solutions.",
+    url: "https://dsonlinetvgh.com",
+    siteName: "DS Online TV GH",
     images: [
       {
-        url: "/og/home.jpg",
-        width: 720,
-        height: 720,
+        url: "https://dsonlinetvgh.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DS Online TV GH",
       },
     ],
     locale: "en_GH",
@@ -50,36 +53,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sendexa | Build with Africa's Best APIs",
-    description:
-      "Node.js, Python & PHP SDKs available. 24/7 support with 15-min SLA.",
-    images: ["/og/home.jpg"],
-    creator: "@SendexaGH",
+    title: "DS Online TV GH | Premier Media Production",
+    description: "Professional media production services in Ghana",
+    images: ["https://dsonlinetvgh.com/twitter-image.jpg"],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-    },
+  metadataBase: new URL("https://dsonlinetvgh.com"),
+  alternates: {
+    canonical: "/",
   },
   icons: {
     icon: "/favicon.png",
-    shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
-    other: {
-      rel: "mask-icon",
-      url: "/safari-pinned-tab.svg",
-      color: "#3a0ca3",
-    },
+    shortcut: "/shortcut-icon.png",
   },
-  themeColor: "#3a0ca3",
-  verification: {
-    google: "your-google-verification-code",
-  },
-};
+}
 
 export default function RootLayout({
   children,

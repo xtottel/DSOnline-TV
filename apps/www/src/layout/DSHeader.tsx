@@ -29,10 +29,6 @@ export const navItems = [
     name: "Home",
     href: "/",
   },
-  // {
-  //   name: "Pricing",
-  //   href: "/pricing",
-  // },
   {
     name: "Services",
     href: "#",
@@ -176,11 +172,6 @@ export function DSHeader() {
 
   return (
     <header
-      // className={`sticky top-0 z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-lg border-b transition-all duration-300 ${
-      //   isScrolled
-      //     ? "border-gray-200/80 dark:border-gray-800/80 shadow-sm"
-      //     : "border-transparent"
-      // }`}
       className={`sticky top-0 z-50 flex h-20 w-full items-center bg-slate-400 justify-between border-b  backdrop-blur supports-[backdrop-filter]:bg-background/60 md:flex ${
         isScrolled
           ? "border-gray-200/80 dark:border-gray-800/80 shadow-sm"
