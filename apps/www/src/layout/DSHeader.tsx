@@ -9,28 +9,22 @@ import Image from "next/image";
 import { Container } from "./Container";
 
 import {
-  MessageSquareText,
-  LockKeyhole,
-  FileText,
-  HelpCircle,
-  Briefcase,
+
   AlignRight,
   ArrowRight,
+  Camera,
   ChevronDown,
   ChevronUp,
   X,
-  Sparkles,
-  MailCheck,
-  MessageCircle,
-  PhoneCall,
-  Hash,
-  // Link as Link2,
-  // BarChart3,
-  // Megaphone,
-  // CalendarClock,
-  // FileInput,
-  // QrCode,
+  Image as ImageIcon,
+  TvMinimalPlay,
+  Radio,
 } from "lucide-react";
+
+import { TbDrone as Drone } from "react-icons/tb";
+
+
+import { Mic2, Film, MonitorSmartphone, Clapperboard } from 'lucide-react';
 
 export const navItems = [
   {
@@ -38,163 +32,103 @@ export const navItems = [
     href: "/",
   },
   {
-    name: "Products",
-    href: "#",
-    subLinks: [
-      {
-        name: "SMS API",
-        href: "/products/sms",
-        description:
-          "Deliver fast, reliable SMS across Ghana with local routing, DND compliance, real-time tracking, and analytics.",
-        icon: <MessageSquareText className="w-5 h-5" />,
-        color:
-          "bg-yellow-50 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-300",
-        cta: false,
-      },
-      {
-        name: "OTP API",
-        href: "/products/otp",
-        description:
-          "Secure logins, transactions, and mobile money transfers using one-time passcodes via SMS or email.",
-        icon: <LockKeyhole className="w-5 h-5" />,
-        color:
-          "bg-indigo-50 text-indigo-800 dark:bg-indigo-900/20 dark:text-indigo-300",
-        cta: false,
-      },
-      {
-        name: "Email API",
-        href: "/products/email",
-        description:
-          "Send transactional and bulk emails with high inbox rates, rapid delivery, and detailed engagement reports.",
-        icon: <MailCheck className="w-5 h-5" />,
-        color:
-          "bg-emerald-50 text-emerald-800 dark:bg-emerald-900/20 dark:text-emerald-300",
-        cta: false,
-      },
-      {
-        name: "Voice API",
-        href: "/products/voice",
-        description:
-          "Run IVR menus, voice OTPs, and customer call flows with crystal-clear audio over local and international routes.",
-        icon: <PhoneCall className="w-5 h-5" />,
-        color:
-          "bg-rose-50 text-rose-800 dark:bg-rose-900/20 dark:text-rose-300",
-        cta: false,
-      },
-      {
-        name: "USSD API",
-        href: "/products/ussd",
-        description:
-          "Create interactive USSD apps for mobile money payments, surveys, and customer self-service, no internet required.",
-        icon: <Hash className="w-5 h-5" />,
-        color:
-          "bg-blue-50 text-blue-800 dark:bg-blue-900/20 dark:text-blue-300",
-        cta: false,
-      },
-      {
-        name: "Chat API",
-        href: "/products/chat",
-        description:
-          "Automate conversations on WhatsApp, Messenger, and Instagram with one unified API for business messaging.",
-        icon: <MessageCircle className="w-5 h-5" />,
-        color:
-          "bg-purple-50 text-purple-800 dark:bg-purple-900/20 dark:text-purple-300",
-        cta: false,
-      },
-    ],
-  },
-  //   {
-  //   name: "Services",
-  //   href: "#",
-  //   subLinks: [
-  //     {
-  //       name: "URL Shortener",
-  //       href: "/services/url-shortener",
-  //       description: "Shorten, track, and analyze links with custom domains and QR codes.",
-  //       icon: <Link2 className="w-5 h-5" />,
-  //       color: "bg-gray-50 text-gray-800 dark:bg-gray-900/20 dark:text-gray-300",
-  //       cta: false,
-  //     },
-  //     {
-  //       name: "Polls & Surveys",
-  //       href: "/services/polls",
-  //       description: "Launch SMS/USSD surveys to collect real-time feedback or votes.",
-  //       icon: <BarChart3 className="w-5 h-5" />,
-  //       color: "bg-blue-50 text-blue-800 dark:bg-blue-900/20 dark:text-blue-300",
-  //       cta: false,
-  //     },
-
-  //     {
-  //       name: "AI Form Builder",
-  //       href: "/services/ai-forms",
-  //       description: "Generate conversational forms and surveys with AI—integrates with WhatsApp and email.",
-  //       icon: <FileInput className="w-5 h-5" />,
-  //       color: "bg-purple-50 text-purple-800 dark:bg-purple-900/20 dark:text-purple-300",
-  //       cta: true,
-  //     },
-  //     {
-  //       name: "QR Code Generator API",
-  //       href: "/services/qr-codes",
-  //       description: "Dynamic QR codes for payments, menus, or event check-ins. Track scans in real-time.",
-  //       icon: <QrCode className="w-5 h-5" />,
-  //       color: "bg-green-50 text-green-800 dark:bg-green-900/20 dark:text-green-300",
-  //       cta: false,
-  //     },
-  //   ],
-  // },
-  {
     name: "Pricing",
     href: "/pricing",
   },
   {
-    name: "Resources",
+    name: "Services",
     href: "#",
     subLinks: [
+      // Video Services
       {
-        name: "Blog & Insights",
-        href: "/blog",
-        description: "Tips, product news, and industry insights.",
-        icon: <FileText className="w-5 h-5" />,
-        color:
-          "bg-orange-50 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300",
+        name: "Live Streaming",
+        href: "/services/live-streaming",
+        description: "Professional multi-camera live streaming for events.",
+        icon: <Radio className="w-5 h-5" />,
+        color: "bg-red-50 text-red-700 dark:bg-red-900/40 dark:text-red-300",
         cta: false,
       },
       {
-        name: "FAQs & Help Center",
-        href: "/faqs",
-        description: "Browse frequently asked questions and answers.",
-        icon: <HelpCircle className="w-5 h-5" />,
-        color:
-          "bg-purple-50 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300",
+        name: "Event Videography",
+        href: "/services/event-videography",
+        description: "Complete coverage of weddings, concerts, and corporate events.",
+        icon: <Clapperboard className="w-5 h-5" />,
+        color: "bg-amber-50 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
         cta: false,
       },
       {
-        name: "Success Stories",
-        href: "/success-stories",
-        description: "Learn how we help businesses grow with SMS.",
-        icon: <Sparkles className="w-5 h-5" />,
-        color:
-          "bg-teal-50 text-teal-700 dark:bg-teal-900/40 dark:text-teal-300",
+        name: "Commercial Videography",
+        href: "/services/commercial-videography",
+        description: "High-quality promotional and advertising videos.",
+        icon: <Film className="w-5 h-5" />,
+        color: "bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
+        cta: false,
+      },
+      
+      // Photography Services
+      {
+        name: "Event Photography",
+        href: "/services/event-photography",
+        description: "Professional coverage of live events and occasions.",
+        icon: <Camera className="w-5 h-5" />,
+        color: "bg-purple-50 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300",
         cta: false,
       },
       {
-        name: "Careers",
-        href: "/careers",
-        description: "Join us in building Africa's comms infrastructure.",
-        icon: <Briefcase className="w-5 h-5" />,
-        color:
-          "bg-emerald-50 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300",
-        cta: true,
+        name: "Portrait Photography",
+        href: "/services/portrait-photography",
+        description: "Studio and outdoor portrait sessions.",
+        icon: <ImageIcon className="w-5 h-5" />,
+        color: "bg-pink-50 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300",
+        cta: false,
       },
+      
+      // Audio & Technical Services
+      {
+        name: "Live Recording",
+        href: "/services/live-recording",
+        description: "High-quality audio recording for live events.",
+        icon: <Mic2 className="w-5 h-5" />,
+        color: "bg-green-50 text-green-700 dark:bg-green-900/40 dark:text-green-300",
+        cta: false,
+      },
+      {
+        name: "Multimedia Production",
+        href: "/services/multimedia-production",
+        description: "Integrated audio-visual production services.",
+        icon: <MonitorSmartphone className="w-5 h-5" />,
+        color: "bg-indigo-50 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300",
+        cta: false,
+      },
+      {
+        name: "Drone Services",
+        href: "/services/drone",
+        description: "Aerial photography and videography.",
+        icon: <Drone className="w-5 h-5" />,
+        color: "bg-teal-50 text-teal-700 dark:bg-teal-900/40 dark:text-teal-300",
+        cta: false,
+      }
     ],
   },
   {
-    name: "Developers",
-    href: "https://developers.sendexa.co",
+    name: "Portfolio",
+    href: "/portfolio",
   },
+  {
+    name: "Gallery",
+    href: "/gallery",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+  }
 ];
 
-export function ExaHeader() {
+export function DSHeader() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
@@ -391,12 +325,13 @@ export function ExaHeader() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button
                 variant="secondary"
+                startIcon={<TvMinimalPlay className="w-4 h-4" />}
                 className="gap-2"
                 onClick={() =>
-                  (window.location.href = "https://app.sendexa.co/login")
+                  (window.location.href = "/live")
                 }
               >
-                <span>Get Started</span>
+                <span>Live TV</span>
               </Button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -405,7 +340,7 @@ export function ExaHeader() {
                 className="gap-2"
                 onClick={() => (window.location.href = "/contact")}
               >
-                <span>Contact Us</span>
+                <span>Book Us</span>
               </Button>
             </motion.div>
           </div>
@@ -578,13 +513,14 @@ export function ExaHeader() {
                   >
                     <Button
                       variant="secondary"
+                      startIcon={<TvMinimalPlay className="w-4 h-4" />}
                       className="w-full gap-2"
                       onClick={() => {
                         closeAllMenus();
-                        window.location.href = "https://app.sendexa.co/login";
+                        window.location.href = "/live";
                       }}
                     >
-                      <span>Get Started</span>
+                      <span>Live TV</span>
                     </Button>
                   </motion.div>
 
@@ -600,7 +536,7 @@ export function ExaHeader() {
                         window.location.href = "/contact";
                       }}
                     >
-                      <span>Contact Us</span>
+                      <span>Book Us</span>
                     </Button>
                   </motion.div>
                 </div>
@@ -612,3 +548,4 @@ export function ExaHeader() {
     </header>
   );
 }
+
