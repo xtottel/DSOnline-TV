@@ -1,7 +1,7 @@
 import { Outfit } from "next/font/google";
 import "@/styles/globals.css";
 import { DSHeader } from "@/layout/DSHeader";
-//import { ExaFooter } from "@/layout/DSFooter";
+import { DSFooter } from "@/layout/DSFooter";
 import { ThemeProvider } from "next-themes";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -114,7 +114,7 @@ export default function RootLayout({
               <main id="main-content" className="min-h-screen">
                 {children}
               </main>
-              {/* <ExaFooter /> */}
+              <DSFooter />
               <CookiesBanner />
               <SpeedInsights />
             </CookiesProvider>

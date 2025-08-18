@@ -9,7 +9,6 @@ import Image from "next/image";
 import { Container } from "./Container";
 
 import {
-
   AlignRight,
   ArrowRight,
   Camera,
@@ -23,18 +22,17 @@ import {
 
 import { TbDrone as Drone } from "react-icons/tb";
 
-
-import { Mic2, Film, MonitorSmartphone, Clapperboard } from 'lucide-react';
+import { Mic2, Film, MonitorSmartphone, Clapperboard } from "lucide-react";
 
 export const navItems = [
   {
     name: "Home",
     href: "/",
   },
-  {
-    name: "Pricing",
-    href: "/pricing",
-  },
+  // {
+  //   name: "Pricing",
+  //   href: "/pricing",
+  // },
   {
     name: "Services",
     href: "#",
@@ -51,9 +49,11 @@ export const navItems = [
       {
         name: "Event Videography",
         href: "/services/event-videography",
-        description: "Complete coverage of weddings, concerts, and corporate events.",
+        description:
+          "Complete coverage of weddings, concerts, and corporate events.",
         icon: <Clapperboard className="w-5 h-5" />,
-        color: "bg-amber-50 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
+        color:
+          "bg-amber-50 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
         cta: false,
       },
       {
@@ -61,17 +61,19 @@ export const navItems = [
         href: "/services/commercial-videography",
         description: "High-quality promotional and advertising videos.",
         icon: <Film className="w-5 h-5" />,
-        color: "bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
+        color:
+          "bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
         cta: false,
       },
-      
+
       // Photography Services
       {
         name: "Event Photography",
         href: "/services/event-photography",
         description: "Professional coverage of live events and occasions.",
         icon: <Camera className="w-5 h-5" />,
-        color: "bg-purple-50 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300",
+        color:
+          "bg-purple-50 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300",
         cta: false,
       },
       {
@@ -79,17 +81,19 @@ export const navItems = [
         href: "/services/portrait-photography",
         description: "Studio and outdoor portrait sessions.",
         icon: <ImageIcon className="w-5 h-5" />,
-        color: "bg-pink-50 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300",
+        color:
+          "bg-pink-50 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300",
         cta: false,
       },
-      
+
       // Audio & Technical Services
       {
         name: "Live Recording",
         href: "/services/live-recording",
         description: "High-quality audio recording for live events.",
         icon: <Mic2 className="w-5 h-5" />,
-        color: "bg-green-50 text-green-700 dark:bg-green-900/40 dark:text-green-300",
+        color:
+          "bg-green-50 text-green-700 dark:bg-green-900/40 dark:text-green-300",
         cta: false,
       },
       {
@@ -97,7 +101,8 @@ export const navItems = [
         href: "/services/multimedia-production",
         description: "Integrated audio-visual production services.",
         icon: <MonitorSmartphone className="w-5 h-5" />,
-        color: "bg-indigo-50 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300",
+        color:
+          "bg-indigo-50 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300",
         cta: false,
       },
       {
@@ -105,9 +110,10 @@ export const navItems = [
         href: "/services/drone",
         description: "Aerial photography and videography.",
         icon: <Drone className="w-5 h-5" />,
-        color: "bg-teal-50 text-teal-700 dark:bg-teal-900/40 dark:text-teal-300",
+        color:
+          "bg-teal-50 text-teal-700 dark:bg-teal-900/40 dark:text-teal-300",
         cta: false,
-      }
+      },
     ],
   },
   {
@@ -125,7 +131,7 @@ export const navItems = [
   {
     name: "Blog",
     href: "/blog",
-  }
+  },
 ];
 
 export function DSHeader() {
@@ -170,7 +176,12 @@ export function DSHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-lg border-b transition-all duration-300 ${
+      // className={`sticky top-0 z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-lg border-b transition-all duration-300 ${
+      //   isScrolled
+      //     ? "border-gray-200/80 dark:border-gray-800/80 shadow-sm"
+      //     : "border-transparent"
+      // }`}
+      className={`sticky top-0 z-50 flex h-20 w-full items-center bg-slate-400 justify-between border-b  backdrop-blur supports-[backdrop-filter]:bg-background/60 md:flex ${
         isScrolled
           ? "border-gray-200/80 dark:border-gray-800/80 shadow-sm"
           : "border-transparent"
@@ -184,12 +195,7 @@ export function DSHeader() {
             className="flex items-center gap-2"
             onClick={closeAllMenus}
           >
-            <Image
-              src="https://cdn.sendexa.co/images/logo/exaweb.png"
-              width={170}
-              height={50}
-              alt="Sendexa Logo"
-            />
+            <Image src="/dstv.png" width={85} height={85} alt="Sendexa Logo" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -215,7 +221,7 @@ export function DSHeader() {
                       href={item.href}
                       className={`relative px-4 py-2.5 text-sm font-medium transition-colors ${
                         pathname === item.href
-                          ? "text-[#094a94] dark:text-teal-400 font-semibold"
+                          ? "text-[#cb991e] dark:text-teal-400 font-semibold"
                           : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                       }`}
                     >
@@ -261,7 +267,7 @@ export function DSHeader() {
                                   href={subLink.href}
                                   className={`block p-3 rounded-lg transition-all ${
                                     subLink.cta
-                                      ? "bg-gradient-to-r from-[#094a94] to-[#f8971d] text-white hover:from-[#f8971d] hover:to-[#094a94]"
+                                      ? "bg-gradient-to-r from-[#cb991e] to-[#f8971d] text-white hover:from-[#f8971d] hover:to-[#cb991e]"
                                       : pathname === subLink.href
                                         ? "bg-blue-50 dark:bg-gray-800"
                                         : "hover:bg-gray-50 dark:hover:bg-gray-800/50"
@@ -327,9 +333,7 @@ export function DSHeader() {
                 variant="secondary"
                 startIcon={<TvMinimalPlay className="w-4 h-4" />}
                 className="gap-2"
-                onClick={() =>
-                  (window.location.href = "/live")
-                }
+                onClick={() => (window.location.href = "/live")}
               >
                 <span>Live TV</span>
               </Button>
@@ -391,10 +395,16 @@ export function DSHeader() {
                   className="flex items-center gap-2"
                   onClick={closeAllMenus}
                 >
-                  <Image
+                  {/* <Image
                     src="https://cdn.sendexa.co/images/logo/exaweb.png"
                     width={170}
                     height={50}
+                    alt="Sendexa Logo"
+                  /> */}
+                  <Image
+                    src="/dstv.png"
+                    width={85}
+                    height={85}
                     alt="Sendexa Logo"
                   />
                 </Link>
@@ -417,7 +427,7 @@ export function DSHeader() {
                           href={item.href}
                           className={`text-base font-medium ${
                             pathname === item.href
-                              ? "text-[#094a94] dark:text-teal-400"
+                              ? "text-[#cb991e] dark:text-teal-400"
                               : "text-gray-900 dark:text-white"
                           }`}
                           onClick={closeAllMenus}
@@ -457,7 +467,7 @@ export function DSHeader() {
                                     href={subLink.href}
                                     className={`block p-3 rounded-lg transition-all ${
                                       subLink.cta
-                                        ? "bg-gradient-to-r from-[#094a94] to-[#f8971d] text-white"
+                                        ? "bg-gradient-to-r from-[#cb991e] to-[#f8971d] text-white"
                                         : pathname === subLink.href
                                           ? "bg-blue-50 dark:bg-gray-800"
                                           : "hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -548,4 +558,3 @@ export function DSHeader() {
     </header>
   );
 }
-

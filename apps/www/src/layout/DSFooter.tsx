@@ -1,61 +1,58 @@
+
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import {
   FaTwitter,
-  FaLinkedin,
-  FaGithub,
-  FaFacebook,
   FaYoutube,
   FaInstagram,
-  // FaYCombinator,
-  // FaGooglePlay,
-  // FaAppStoreIos,
+  FaTwitch,
+  FaFacebook,
+  FaTiktok
 } from "react-icons/fa";
 
-export const ExaFooter = () => {
+export const DSFooter = () => {
   const currentYear = new Date().getFullYear();
 
   const links = [
- {
-  title: "Products",
-  items: [
-    { name: "SMS Messaging", href: "/products/sms" },
-    { name: "Email Marketing", href: "/products/email" }, 
-    { name: "Secure OTP API", href: "/products/otp" },
-    { name: "Voice API", href: "/products/voice" },
-    { name: "USSD API", href: "/products/ussd" },
-  ],
-}
-,
     {
-      title: "Developers",
+      title: "Services",
       items: [
-        { name: "API Reference", href: "/developers/api" },
-        { name: "Webhooks", href: "/developers/webhooks" },
-        { name: "Code Samples", href: "/developers/samples" },
-        { name: "Testing", href: "/developers/sandbox" },
-        { name: "API Status", href: "/status" },
+        { name: "Live Streaming", href: "/services/live-streaming" },
+        { name: "Event Coverage", href: "/services/event-coverage" },
+        { name: "Video Production", href: "/services/video-production" },
+        { name: "Studio Rental", href: "/services/studio-rental" },
+        { name: "Media Training", href: "/services/media-training" },
+      ],
+    },
+    {
+      title: "Productions",
+      items: [
+        { name: "TV Shows", href: "/productions/tv-shows" },
+        { name: "Documentaries", href: "/productions/documentaries" },
+        { name: "Corporate Videos", href: "/productions/corporate" },
+        { name: "Live Events", href: "/productions/live-events" },
+        { name: "Our Equipment", href: "/productions/equipment" },
       ],
     },
     {
       title: "Resources",
       items: [
-        { name: "Documentation", href: "/developers" },
-        { name: "FAQs & Help", href: "/faqs" },
-        { name: "Industry Reports", href: "/reports" },
-        { name: "Case Studies", href: "/cases-studies" },
-        { name: "Legal Pages", href: "/legal" },
+        { name: "Blog & Tutorials", href: "/resources/blog" },
+        { name: "FAQs", href: "/resources/faqs" },
+        { name: "Media Kit", href: "/resources/media-kit" },
+        { name: "Pricing", href: "/pricing" },
+        { name: "Client Portal", href: "/login" },
       ],
     },
     {
       title: "Company",
       items: [
-        { name: "About", href: "/about" },
-        { name: "Leadership", href: "/team" },
+        { name: "About Us", href: "/about" },
+        { name: "Our Team", href: "/team" },
         { name: "Careers", href: "/careers" },
-        { name: "Blog", href: "/blog" },
+        { name: "Testimonials", href: "/testimonials" },
         { name: "Contact", href: "/contact" },
       ],
     },
@@ -63,40 +60,40 @@ export const ExaFooter = () => {
 
   const socialIcons = [
     {
-      icon: FaFacebook,
-      href: "https://facebook.com/sendexa",
-      label: "Facebook",
-      className: "hover:text-blue-600",
+      icon: FaYoutube,
+      href: "https://youtube.com/dsonlinetv",
+      label: "YouTube",
+      className: "hover:text-red-600",
     },
     {
       icon: FaInstagram,
-      href: "https://instagram.com/sendexa",
+      href: "https://instagram.com/dsonlinetv",
       label: "Instagram",
       className: "hover:text-pink-500",
     },
     {
       icon: FaTwitter,
-      href: "https://twitter.com/sendexaHQ",
+      href: "https://twitter.com/dsonlinetv",
       label: "Twitter/X",
       className: "hover:text-blue-400",
     },
     {
-      icon: FaYoutube,
-      href: "https://youtube.com/@sendexa",
-      label: "YouTube",
-      className: "hover:text-red-600",
+      icon: FaTwitch,
+      href: "https://twitch.tv/dsonlinetv",
+      label: "Twitch",
+      className: "hover:text-purple-500",
     },
     {
-      icon: FaLinkedin,
-      href: "https://linkedin.com/company/sendexa",
-      label: "LinkedIn",
+      icon: FaTiktok,
+      href: "https://tiktok.com/@dsonlinetv",
+      label: "TikTok",
+      className: "hover:text-black dark:hover:text-white",
+    },
+    {
+      icon: FaFacebook,
+      href: "https://facebook.com/dsonlinetv",
+      label: "Facebook",
       className: "hover:text-blue-600",
-    },
-    {
-      icon: FaGithub,
-      href: "https://github.com/sendexa",
-      label: "GitHub",
-      className: "hover:text-gray-300",
     },
   ];
 
@@ -112,40 +109,36 @@ export const ExaFooter = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Image
-                  src="https://cdn.sendexa.co/images/logo/exaweb.png"
-                  width={160}
-                  height={32}
-                  alt="Sendexa Logo"
-                  className="h-10 w-auto"
-                  priority
+                  src="/dstv.png"
+                  width={85}
+                  height={85}
+                  alt="DS Online TV Logo"
+                  className="h-auto"
                 />
               </motion.div>
             </Link>
             <p className="text-sm text-gray-400">
-              Sendexa is a modern communication platform built to power seamless
-              messaging, OTP, email, and voice solutions. Our mission is to help
-              businesses connect, verify, and engage their customers with speed,
-              reliability, and ease.
+              DS Online TV GH is a premier media production company specializing in live 
+              streaming, video production, and broadcast services. We bring your 
+              vision to life with cutting-edge technology and creative storytelling.
             </p>
 
             {/* Social Icons */}
             <div className="flex space-x-3 mt-6">
-              {socialIcons.map(
-                ({ icon: Icon, href, label, className }, idx) => (
-                  <motion.a
-                    key={idx}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    className={`p-2 rounded-md bg-gray-900 hover:bg-gray-800 transition-all border border-gray-800 ${className}`}
-                    whileHover={{ y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Icon className="h-4 w-4" />
-                  </motion.a>
-                )
-              )}
+              {socialIcons.map(({ icon: Icon, href, label, className }, idx) => (
+                <motion.a
+                  key={idx}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className={`p-2 rounded-md bg-gray-900 hover:bg-gray-800 transition-all border border-gray-800 ${className}`}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Icon className="h-4 w-4" />
+                </motion.a>
+              ))}
             </div>
           </div>
 
@@ -193,17 +186,16 @@ export const ExaFooter = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
             className="text-sm text-gray-500"
-            aria-label={`Copyright ${currentYear} Sendexa, Inc.`}
+            aria-label={`Copyright ${currentYear} DS Online TV`}
           >
             &copy; {currentYear}{" "}
             <span className="font-medium text-[#f8971d] transition-colors duration-300 underline-offset-2">
-              Sendexa LLC.
+              DS Online TV GH
             </span>
             . All rights reserved.
           </motion.p>
 
           {/* Built with Love by Xtottel Ltd */}
-
           <motion.div
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.95 }}
@@ -214,7 +206,7 @@ export const ExaFooter = () => {
             className="text-sm text-gray-500 transition-all group"
           >
             <p className="transition-all duration-300">
-              Built with <span className="text-red-500"> 💚</span> by{" "}
+              Built with <span className="text-red-500">💚</span> by{" "}
               <a
                 href="https://xtottel.com"
                 target="_blank"
