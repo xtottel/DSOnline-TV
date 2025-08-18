@@ -1,22 +1,22 @@
 import HeroSlider from "./HeroSlider";
-import { TrustSignals } from "./TrustSignals";
-import ProductsGrid from "./ProductsGrid";
-import CoverageMap from "./CoverageMap";
-import HowItWorks from "./HowItWorks";
-import DevExperience from "./DevExperience";
-import CustomerStories from "./CustomerStories";
+// import { TrustSignals } from "./TrustSignals";
+// import ProductsGrid from "./ProductsGrid";
+// import CoverageMap from "./CoverageMap";
+// import HowItWorks from "./HowItWorks";
+// import DevExperience from "./DevExperience";
+// import CustomerStories from "./CustomerStories";
 import { FinalCTA } from "./FinalCTA";
 
 export default function Homepage() {
   return (
     <div className="bg-white">
       <HeroSlider />
-      <TrustSignals />
+      {/* <TrustSignals />
       <ProductsGrid />
       <CoverageMap />
       <CustomerStories />
       <HowItWorks />
-      <DevExperience />
+      <DevExperience /> */}
       <FinalCTA />
 
       {/* Floating WhatsApp CTA */}
