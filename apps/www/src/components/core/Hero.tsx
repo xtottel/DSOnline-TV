@@ -30,7 +30,7 @@ const defaultSlides: Slide[] = [
       "Creating compelling content that captivates audiences and delivers results. From concept to completion, we bring stories to life.",
     buttonText: "View Our Work",
     buttonLink: "/portfolio",
-    backgroundImage: "/slider1.jpg",
+    backgroundImage: "/Slider1.jpg",
     imageAlt: "Film production team working on set",
   },
   {
@@ -40,7 +40,7 @@ const defaultSlides: Slide[] = [
       "Harnessing the power of digital platforms to tell stories that resonate with your audience and amplify your brand's message.",
     buttonText: "Our Services",
     buttonLink: "/services",
-    backgroundImage: "/slider1.jpg",
+    backgroundImage: "/Slider1.jpg",
     imageAlt: "Digital content creation team brainstorming",
   },
   {
@@ -50,7 +50,7 @@ const defaultSlides: Slide[] = [
       "Blending creativity with technology to deliver cutting-edge media experiences that engage, inform, and inspire action.",
     buttonText: "Learn More",
     buttonLink: "/solutions",
-    backgroundImage: "/slider1.jpg",
+    backgroundImage: "/Slider1.jpg",
     imageAlt: "High-tech media production equipment",
   },
 ];
