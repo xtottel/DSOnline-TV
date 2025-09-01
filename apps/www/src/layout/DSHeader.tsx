@@ -11,106 +11,122 @@ import { Container } from "./Container";
 import {
   AlignRight,
   ArrowRight,
-  Camera,
+//  Camera,
   ChevronDown,
   ChevronUp,
   X,
-  Image as ImageIcon,
+//  Image as ImageIcon,
   TvMinimalPlay,
-  Radio,
+//  Radio,
 } from "lucide-react";
 
-import { TbDrone as Drone } from "react-icons/tb";
+//import { TbDrone as Drone } from "react-icons/tb";
 
-import { Mic2, Film, MonitorSmartphone, Clapperboard } from "lucide-react";
+//import { Mic2, Film, MonitorSmartphone, Clapperboard } from "lucide-react";
 
-export const navItems = [
+// Define types for navItems and subLinks
+type SubLink = {
+  name: string;
+  href: string;
+  description?: string;
+  icon?: React.ReactNode;
+  color?: string;
+  cta?: boolean;
+};
+
+type NavItem = {
+  name: string;
+  href: string;
+  subLinks?: SubLink[];
+};
+
+export const navItems: NavItem[] = [
   {
     name: "Home",
     href: "/",
   },
   {
     name: "Services",
-    href: "#",
-    subLinks: [
-      // Video Services
-      {
-        name: "Live Streaming",
-        href: "/services/live-streaming",
-        description: "Professional multi-camera live streaming for events.",
-        icon: <Radio className="w-5 h-5" />,
-        color: "bg-red-50 text-red-700 dark:bg-red-900/40 dark:text-red-300",
-        cta: false,
-      },
-      {
-        name: "Event Videography",
-        href: "/services/event-videography",
-        description:
-          "Complete coverage of weddings, concerts, and corporate events.",
-        icon: <Clapperboard className="w-5 h-5" />,
-        color:
-          "bg-amber-50 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
-        cta: false,
-      },
-      {
-        name: "Commercial Videography",
-        href: "/services/commercial-videography",
-        description: "High-quality promotional and advertising videos.",
-        icon: <Film className="w-5 h-5" />,
-        color:
-          "bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
-        cta: false,
-      },
+    href: "/services",
+    // subLinks: [
+    //   // Video Services
+    //   {
+    //     name: "Live Streaming",
+    //     href: "/services/live-streaming",
+    //     description: "Professional multi-camera live streaming for events.",
+    //     icon: <Radio className="w-5 h-5" />,
+    //     color: "bg-red-50 text-red-700 dark:bg-red-900/40 dark:text-red-300",
+    //     cta: false,
+    //   },
+    //   {
+    //     name: "Event Videography",
+    //     href: "/services/event-videography",
+    //     description:
+    //       "Complete coverage of weddings, concerts, and corporate events.",
+    //     icon: <Clapperboard className="w-5 h-5" />,
+    //     color:
+    //       "bg-amber-50 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300",
+    //     cta: false,
+    //   },
+    //   {
+    //     name: "Commercial Videography",
+    //     href: "/services/commercial-videography",
+    //     description: "High-quality promotional and advertising videos.",
+    //     icon: <Film className="w-5 h-5" />,
+    //     color:
+    //       "bg-blue-50 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
+    //     cta: false,
+    //   },
 
-      // Photography Services
-      {
-        name: "Event Photography",
-        href: "/services/event-photography",
-        description: "Professional coverage of live events and occasions.",
-        icon: <Camera className="w-5 h-5" />,
-        color:
-          "bg-purple-50 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300",
-        cta: false,
-      },
-      {
-        name: "Portrait Photography",
-        href: "/services/portrait-photography",
-        description: "Studio and outdoor portrait sessions.",
-        icon: <ImageIcon className="w-5 h-5" />,
-        color:
-          "bg-pink-50 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300",
-        cta: false,
-      },
+    //   // Photography Services
+    //   {
+    //     name: "Event Photography",
+    //     href: "/services/event-photography",
+    //     description: "Professional coverage of live events and occasions.",
+    //     icon: <Camera className="w-5 h-5" />,
+    //     color:
+    //       "bg-purple-50 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300",
+    //     cta: false,
+    //   },
+    //   {
+    //     name: "Portrait Photography",
+    //     href: "/services/portrait-photography",
+    //     description: "Studio and outdoor portrait sessions.",
+    //     icon: <ImageIcon className="w-5 h-5" />,
+    //     color:
+    //       "bg-pink-50 text-pink-700 dark:bg-pink-900/40 dark:text-pink-300",
+    //     cta: false,
+    //   },
 
-      // Audio & Technical Services
-      {
-        name: "Live Recording",
-        href: "/services/live-recording",
-        description: "High-quality audio recording for live events.",
-        icon: <Mic2 className="w-5 h-5" />,
-        color:
-          "bg-green-50 text-green-700 dark:bg-green-900/40 dark:text-green-300",
-        cta: false,
-      },
-      {
-        name: "Multimedia Production",
-        href: "/services/multimedia-production",
-        description: "Integrated audio-visual production services.",
-        icon: <MonitorSmartphone className="w-5 h-5" />,
-        color:
-          "bg-indigo-50 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300",
-        cta: false,
-      },
-      {
-        name: "Drone Services",
-        href: "/services/drone",
-        description: "Aerial photography and videography.",
-        icon: <Drone className="w-5 h-5" />,
-        color:
-          "bg-teal-50 text-teal-700 dark:bg-teal-900/40 dark:text-teal-300",
-        cta: false,
-      },
-    ],
+    //   // Audio & Technical Services
+    //   {
+    //     name: "Live Recording",
+    //     href: "/services/live-recording",
+    //     description: "High-quality audio recording for live events.",
+    //     icon: <Mic2 className="w-5 h-5" />,
+    //     color:
+    //       "bg-green-50 text-green-700 dark:bg-green-900/40 dark:text-green-300",
+    //     cta: false,
+    //   },
+    //   {
+    //     name: "Multimedia Production",
+    //     href: "/services/multimedia-production",
+    //     description: "Integrated audio-visual production services.",
+    //     icon: <MonitorSmartphone className="w-5 h-5" />,
+    //     color:
+    //       "bg-indigo-50 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300",
+    //     cta: false,
+    //   },
+    //   {
+    //     name: "Drone Services",
+    //     href: "/services/drone",
+    //     description: "Aerial photography and videography.",
+    //     icon: <Drone className="w-5 h-5" />,
+    //     color:
+    //       "bg-teal-50 text-teal-700 dark:bg-teal-900/40 dark:text-teal-300",
+    //     cta: false,
+    //   },
+    // ],
   },
   {
     name: "Portfolio",
