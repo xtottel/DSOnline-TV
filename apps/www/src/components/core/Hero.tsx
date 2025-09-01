@@ -25,33 +25,43 @@ interface HeroSliderProps {
 const defaultSlides: Slide[] = [
   {
     id: 1,
-    title: "Premium Media Production",
+    title: "Volta & Oti Region’s Trusted Media House",
     description:
-      "Creating compelling content that captivates audiences and delivers results. From concept to completion, we bring stories to life.",
-    buttonText: "View Our Work",
-    buttonLink: "/portfolio",
-    backgroundImage: "/Slider1.jpg",
-    imageAlt: "Film production team working on set",
+      "Delivering authentic stories, cultural events, music, and live shows — DS Online TV is the heartbeat of Volta’s digital media.",
+    buttonText: "Discover DS Online TV",
+    buttonLink: "/about",
+    backgroundImage: "/Slider4.jpg",
+    imageAlt: "Crowd enjoying a live cultural event in Volta Region",
   },
   {
     id: 2,
-    title: "Digital Storytelling Experts",
+    title: "Streaming Entertainment Anytime, Anywhere",
     description:
-      "Harnessing the power of digital platforms to tell stories that resonate with your audience and amplify your brand's message.",
-    buttonText: "Our Services",
-    buttonLink: "/services",
-    backgroundImage: "/Slider1.jpg",
-    imageAlt: "Digital content creation team brainstorming",
+      "Enjoy live shows, trending music, and exclusive interviews streamed directly to your device — no boundaries, just vibes.",
+    buttonText: "Watch Live",
+    buttonLink: "/live",
+    backgroundImage: "/Slider2.jpg",
+    imageAlt: "Person watching DS Online TV on a laptop and phone",
   },
   {
     id: 3,
-    title: "Innovative Media Solutions",
+    title: "Empowering Local Voices",
     description:
-      "Blending creativity with technology to deliver cutting-edge media experiences that engage, inform, and inspire action.",
-    buttonText: "Learn More",
-    buttonLink: "/solutions",
+      "Showcasing talents, stories, and innovations from Volta & Oti to the world — giving our people the platform they deserve.",
+    buttonText: "Join the Movement",
+    buttonLink: "/join",
+    backgroundImage: "/Slider3.jpg",
+    imageAlt: "Young artist performing on stage",
+  },
+  {
+    id: 4,
+    title: "Visuals That Speak Louder Than Words",
+    description:
+      "Because sometimes one frame can do what a thousand words can’t — inspire, move, and leave a mark.",
+    buttonText: "Get Started",
+    buttonLink: "/contact",
     backgroundImage: "/Slider1.jpg",
-    imageAlt: "High-tech media production equipment",
+    imageAlt: "Cinematic camera lens capturing visuals",
   },
 ];
 
@@ -213,7 +223,7 @@ export default function Hero({
             </motion.p>
             <motion.a
               href={slides[currentSlide].buttonLink}
-              className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-block px-8 py-3 bg-[#cb991e] hover:bg-[#d8aa3a] text-black font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               custom={2}
               variants={contentVariants}
               initial="hidden"
