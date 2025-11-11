@@ -7,8 +7,8 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { AnalyticsProvider } from "@/context/AnalyticsProvider";
-import { CookiesProvider } from "@/context/CookiesContext";
-import { CookiesBanner } from "@/components/common/CookiesBanner";
+// import { CookiesProvider } from "@/context/CookiesContext";
+// import { CookiesBanner } from "@/components/common/CookiesBanner";
 import Script from "next/script";
 import { TrackingScripts } from "@/components/common/TrackingScripts";
 //import TopBar from "@/layout/Topbar";
@@ -94,7 +94,7 @@ export default function RootLayout({
           storageKey="sendexa-theme"
         >
           <AnalyticsProvider>
-            <CookiesProvider>
+            {/* <CookiesProvider> */}
               {/* <TopBar /> */}
               <DSHeader />
              
@@ -102,9 +102,9 @@ export default function RootLayout({
                 {children}
               </main>
               <DSFooter />
-              <CookiesBanner />
+              {/* <CookiesBanner /> */}
               <SpeedInsights />
-            </CookiesProvider>
+            {/* </CookiesProvider> */}
           </AnalyticsProvider>
         </ThemeProvider>
 

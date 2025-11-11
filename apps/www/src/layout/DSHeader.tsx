@@ -349,7 +349,7 @@ export function DSHeader() {
               <Button
                 variant="primary"
                 className="gap-2"
-                onClick={() => (window.location.href = "/contact")}
+                onClick={() => (window.location.href = "/booking")}
               >
                 <span>Book Us</span>
               </Button>
@@ -550,7 +550,7 @@ export function DSHeader() {
                       className="w-full gap-2"
                       onClick={() => {
                         closeAllMenus();
-                        window.location.href = "/contact";
+                        window.location.href = "/booking";
                       }}
                     >
                       <span>Book Us</span>

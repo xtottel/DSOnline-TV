@@ -1,0 +1,43 @@
+{
+  "navMain": [
+    {
+      "title": "Dashboard",
+      "url": "/home",
+      "icon": "dashboard"
+    },
+     {
+      "title": "Analytics",
+      "url": "/analytics",
+      "icon": "analytics",
+      "items": [
+        { "title": "Overview", "url": "/analytics" },
+        { "title": "Traffic", "url": "/analytics/traffic" },
+        { "title": "Popular Content", "url": "/analytics/popular" }
+      ]
+    },
+    {
+      "title": "Content",
+      "url": "/content",
+      "icon": "post",
+      "items": [
+        { "title": "New Post", "url": "/content/new" },
+        { "title": "All Posts", "url": "/content/posts" },
+        { "title": "Categories", "url": "/content/categories" }
+      ]
+    },
+    {
+      "title": "Media",
+      "url": "/media",
+      "icon": "image",
+      "items": [
+        { "title": "Library", "url": "/media/library" },
+        { "title": "Upload", "url": "/media/upload" }
+      ]
+    },
+    {
+      "title": "Comments",
+      "url": "/comments",
+      "icon": "comment"
+    }
+  ]
+}
