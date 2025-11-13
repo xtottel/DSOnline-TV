@@ -60,7 +60,7 @@ export default function About() {
                   className="w-full h-auto rounded-lg"
                 />
                 <div className="absolute bottom-6 left-6 bg-[#cb991e] text-black px-4 py-2 rounded-lg">
-                  <p className="font-semibold">Since 2020</p>
+                  <p className="font-semibold">Since 2021</p>
                   <p className="text-sm">Telling Volta & Oti Stories</p>
                 </div>
               </div>
@@ -72,7 +72,7 @@ export default function About() {
               <p className="text-lg text-gray-600 mb-6">
                 DS Online TV was born from a passion to showcase the rich
                 cultural heritage, vibrant communities, and untold stories of
-                the Volta and Oti Regions to the world. Founded in 2020, we
+                the Volta and Oti Regions to the world. Founded in 2021, we
                 started as a small team of media enthusiasts with a big vision.
               </p>
               <p className="text-lg text-gray-600 mb-6">
@@ -91,7 +91,7 @@ export default function About() {
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-[#cb991e] mb-2">
-                    100K+
+                    1M+
                   </div>
                   <div className="text-gray-600">Global Viewers</div>
                 </div>
@@ -184,7 +184,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-15 bg-gray-900 text-white">
+      {/* <section className="py-15 bg-gray-900 text-white">
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -231,7 +231,7 @@ export default function About() {
             </Link>
           </div>
         </Container>
-      </section>
+      </section> */}
 
       {/* Achievements */}
       <section className="py-15 bg-white">
@@ -377,32 +377,32 @@ const values = [
   },
 ];
 
-const teamMembers = [
-  {
-    name: "David Sefakor",
-    role: "Founder & CEO",
-    bio: "Visionary leader with 10+ years in media production",
-    image: "/team/ceo.jpg",
-  },
-  {
-    name: "Akua Nyuieme",
-    role: "Creative Director",
-    bio: "Award-winning filmmaker and cultural preservationist",
-    image: "/team/creative.jpg",
-  },
-  {
-    name: "Kofi Agbenyo",
-    role: "Technical Lead",
-    bio: "Expert in live streaming and broadcast technology",
-    image: "/team/technical.jpg",
-  },
-  {
-    name: "Esi Amedorme",
-    role: "Community Manager",
-    bio: "Connecting with communities across Volta and Oti",
-    image: "/team/community.jpg",
-  },
-];
+// const teamMembers = [
+//   {
+//     name: "Simon Hedeka",
+//     role: "Founder & CEO",
+//     bio: "Visionary leader with 10+ years in media production",
+//     image: "/team/ceo.jpg",
+//   },
+//   {
+//     name: "Akua Nyuieme",
+//     role: "Creative Director",
+//     bio: "Award-winning filmmaker and cultural preservationist",
+//     image: "/team/creative.jpg",
+//   },
+//   {
+//     name: "Kofi Agbenyo",
+//     role: "Technical Lead",
+//     bio: "Expert in live streaming and broadcast technology",
+//     image: "/team/technical.jpg",
+//   },
+//   {
+//     name: "Esi Amedorme",
+//     role: "Community Manager",
+//     bio: "Connecting with communities across Volta and Oti",
+//     image: "/team/community.jpg",
+//   },
+// ];
 
 const achievements = [
   {
