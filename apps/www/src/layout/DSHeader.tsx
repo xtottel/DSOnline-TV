@@ -128,6 +128,10 @@ export const navItems: NavItem[] = [
     //   },
     // ],
   },
+   {
+    name: "Shows",
+    href: "/shows",
+  },
   {
     name: "Portfolio",
     href: "/portfolio",

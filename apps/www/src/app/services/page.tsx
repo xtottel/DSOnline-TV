@@ -2,7 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/layout/Container";
-import { FaPlayCircle, FaFilm, FaBroadcastTower, FaMicrophone, FaGlobeAfrica, FaPhotoVideo, FaArrowRight, FaCheckCircle } from "react-icons/fa";
+import {  FaFilm, FaBroadcastTower, FaMicrophone,  FaPhotoVideo, FaArrowRight, FaCheckCircle } from "react-icons/fa";
+import { GiDeliveryDrone, GiBigDiamondRing } from "react-icons/gi";
+import { TbCoffin } from "react-icons/tb";
 
 export default function Services() {
   return (
@@ -177,18 +179,73 @@ export default function Services() {
 const services = [
   {
     icon: <FaBroadcastTower className="text-white text-2xl" />,
-    title: "Live Event Broadcasting",
+    title: "Live Event Streaming",
     category: "Broadcast",
     description: "Professional live streaming of cultural events, festivals, and ceremonies.",
     features: [
       "Multi-camera setup",
-      "Professional audio capture",
+      "4K & HD Resolution",
       "Real-time streaming",
       "Social media integration",
       "Post-event highlights"
     ],
     image: "/live-broadcast.jpg",
     link: "/services/live-broadcasting"
+  },
+   {
+    icon: <FaPhotoVideo className="text-white text-2xl" />,
+    title: "Photography Services",
+    category: "Photography",
+    description: "High-quality photography for events, portraits, and commercial use.",
+    features: [
+      "Photoshoot (Studio & Outdoor)",
+      "Event Photography",
+      "Product photography",
+      "Photo editing",
+    ],
+    image: "/photography-services.jpg",
+    link: "/services/photography"
+  },
+   {
+    icon: <GiBigDiamondRing className="text-white text-2xl" />,
+    title: "Weeding Services",
+    category: "Weeding",
+    description: "Comprehensive weeding videography and photography services to capture your special day.",
+    features: [
+      "Pre-weeding",
+      "Engagement Ceremony",
+      "Weeding Ceremony",
+    ],
+    image: "/cultural-programming.jpg",
+    link: "/services/weeding"
+  },
+   //Funeral Service
+  {
+    icon: <TbCoffin className="text-white text-2xl" />,
+    title: "Funeral Services",
+    category: "Funeral",
+    description: "Comprehensive funeral videography and photography services to honor your loved ones.",
+    features: [
+      "Pre-funeral coverage",
+      "Funeral Ceremony",
+      "Memorial videos",
+    ],
+    image: "/cultural-programming.jpg",
+    link: "/services/funeral"
+  },
+  //Drone Service
+  {
+    icon: <GiDeliveryDrone className="text-white text-2xl" />,
+    title: "Drone Services",
+    category: "Drone",
+    description: "Aerial videography and photography services using state-of-the-art drone technology.",
+    features: [
+      "Aerial filming",
+      "High-resolution photography",
+      "Cinematic shots",
+    ],
+    image: "/drone-videography.jpg",
+    link: "/services/drone-videography"
   },
   {
     icon: <FaFilm className="text-white text-2xl" />,
@@ -205,66 +262,22 @@ const services = [
     image: "/documentary-production.jpg",
     link: "/services/documentaries"
   },
-  {
-    icon: <FaPlayCircle className="text-white text-2xl" />,
-    title: "Entertainment Content",
-    category: "Entertainment",
-    description: "Music videos, drama series, and entertainment shows featuring local talent.",
-    features: [
-      "Concept development",
-      "Talent coordination",
-      "Professional production",
-      "Editing and effects",
-      "Platform optimization"
-    ],
-    image: "/entertainment-content.jpg",
-    link: "/services/entertainment"
-  },
+ 
+ 
   {
     icon: <FaMicrophone className="text-white text-2xl" />,
-    title: "Audio Production",
+    title: "Video / Audio Production",
     category: "Audio",
-    description: "Professional audio recording, podcasts, and sound design services.",
+    description: "High-quality video and audio production services for various media needs.",
     features: [
       "Studio recording",
-      "Field recording",
-      "Audio editing",
-      "Sound design",
+      "Voiceovers",
+      "On-location shoots",
       "Mixing and mastering"
     ],
     image: "/audio-production.jpg",
     link: "/services/audio"
   },
-  {
-    icon: <FaPhotoVideo className="text-white text-2xl" />,
-    title: "Photography Services",
-    category: "Photography",
-    description: "High-quality photography for events, portraits, and commercial use.",
-    features: [
-      "Event coverage",
-      "Portrait sessions",
-      "Product photography",
-      "Photo editing",
-      "Digital delivery"
-    ],
-    image: "/photography-services.jpg",
-    link: "/services/photography"
-  },
-  {
-    icon: <FaGlobeAfrica className="text-white text-2xl" />,
-    title: "Cultural Programming",
-    category: "Cultural",
-    description: "Content that celebrates and preserves the unique traditions of our regions.",
-    features: [
-      "Cultural research",
-      "Elder consultations",
-      "Traditional practices",
-      "Language preservation",
-      "Educational content"
-    ],
-    image: "/cultural-programming.jpg",
-    link: "/services/cultural"
-  }
 ];
 
 const processSteps = [
