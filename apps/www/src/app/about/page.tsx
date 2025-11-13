@@ -25,8 +25,9 @@ export default function About() {
               About <span className="text-[#cb991e]">DS Online TV</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Pioneering digital storytelling from the heart of Volta and Oti Regions, 
-              connecting cultures and communities through innovative media.
+              Pioneering digital storytelling from the heart of Volta and Oti
+              Regions, connecting cultures and communities through innovative
+              media.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
@@ -69,31 +70,41 @@ export default function About() {
                 Our <span className="text-[#cb991e]">Story</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                DS Online TV was born from a passion to showcase the rich cultural heritage, 
-                vibrant communities, and untold stories of the Volta and Oti Regions to the world. 
-                Founded in 2020, we started as a small team of media enthusiasts with a big vision.
+                DS Online TV was born from a passion to showcase the rich
+                cultural heritage, vibrant communities, and untold stories of
+                the Volta and Oti Regions to the world. Founded in 2020, we
+                started as a small team of media enthusiasts with a big vision.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Today, we've grown into a comprehensive digital media platform that reaches 
-                audiences across Ghana and the global diaspora. Our commitment remains the same: 
-                to provide authentic, high-quality content that celebrates our heritage while 
+                Today, we&apos;ve grown into a comprehensive digital media
+                platform that reaches audiences across Ghana and the global
+                diaspora. Our commitment remains the same: to provide authentic,
+                high-quality content that celebrates our heritage while
                 embracing modern storytelling techniques.
               </p>
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#cb991e] mb-2">50+</div>
+                  <div className="text-3xl font-bold text-[#cb991e] mb-2">
+                    50+
+                  </div>
                   <div className="text-gray-600">Events Covered</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#cb991e] mb-2">100K+</div>
+                  <div className="text-3xl font-bold text-[#cb991e] mb-2">
+                    100K+
+                  </div>
                   <div className="text-gray-600">Global Viewers</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#cb991e] mb-2">25+</div>
+                  <div className="text-3xl font-bold text-[#cb991e] mb-2">
+                    25+
+                  </div>
                   <div className="text-gray-600">Team Members</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#cb991e] mb-2">15+</div>
+                  <div className="text-3xl font-bold text-[#cb991e] mb-2">
+                    15+
+                  </div>
                   <div className="text-gray-600">Communities Served</div>
                 </div>
               </div>
@@ -112,30 +123,30 @@ export default function About() {
               </div>
               <h3 className="text-3xl font-bold mb-6">Our Vision</h3>
               <p className="text-lg text-gray-300 mb-6">
-                To be the leading digital media platform that bridges cultures and connects 
-                the global community with the authentic stories and rich heritage of Volta 
-                and Oti Regions.
+                To capture, produce, and broadcast high-quality visual stories
+                through videography, livestreaming, and photography; informing,
+                educating, and preserving cultural heritage with
+                creative excellence.
               </p>
               <p className="text-gray-400">
-                We envision a world where every community's story is told with dignity, 
-                respect, and professional excellence.
+               #Feel the social media
               </p>
             </div>
-            
+
             <div className="text-center p-8 bg-gray-800 rounded-lg hover:shadow-xl transition-all duration-300">
               <div className="w-20 h-20 bg-[#cb991e] rounded-full flex items-center justify-center mx-auto mb-6">
                 <FaRocket className="text-white text-2xl" />
               </div>
               <h3 className="text-3xl font-bold mb-6">Our Mission</h3>
               <p className="text-lg text-gray-300 mb-6">
-                To create, produce, and distribute high-quality digital content that 
-                celebrates our cultural heritage, promotes tourism, supports local 
-                businesses, and preserves our traditions for future generations.
+                To set the standard for high-quality visual storytelling in
+                Volta and Oti Region of Ghana and beyond; capturing moments that
+                educate, uplift, and transform communities.
               </p>
-              <p className="text-gray-400">
-                Through innovative storytelling and cutting-edge technology, we empower 
-                communities and inspire global connections.
-              </p>
+              {/* <p className="text-gray-400">
+                Through innovative storytelling and cutting-edge technology, we
+                empower communities and inspire global connections.
+              </p> */}
             </div>
           </div>
         </Container>
@@ -180,7 +191,8 @@ export default function About() {
               Meet Our <span className="text-[#cb991e]">Team</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Passionate professionals dedicated to showcasing the best of Volta and Oti Regions
+              Passionate professionals dedicated to showcasing the best of Volta
+              and Oti Regions
             </p>
           </div>
 
@@ -229,7 +241,8 @@ export default function About() {
               Our <span className="text-[#cb991e]">Achievements</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Milestones and recognition that mark our journey in digital storytelling
+              Milestones and recognition that mark our journey in digital
+              storytelling
             </p>
           </div>
 
@@ -246,7 +259,9 @@ export default function About() {
                   {achievement.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{achievement.description}</p>
-                <span className="text-[#cb991e] font-semibold">{achievement.year}</span>
+                <span className="text-[#cb991e] font-semibold">
+                  {achievement.year}
+                </span>
               </div>
             ))}
           </div>
@@ -280,9 +295,7 @@ export default function About() {
                     <h4 className="font-semibold text-white">
                       {testimonial.name}
                     </h4>
-                    <p className="text-[#cb991e] text-sm">
-                      {testimonial.role}
-                    </p>
+                    <p className="text-[#cb991e] text-sm">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
@@ -299,8 +312,8 @@ export default function About() {
               Ready to Tell Your Story?
             </h2>
             <p className="text-xl mb-8">
-              Partner with us to showcase your event, business, or community initiative 
-              to a global audience
+              Partner with us to showcase your event, business, or community
+              initiative to a global audience
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -329,32 +342,38 @@ const values = [
   {
     icon: <FaHeart className="text-white text-2xl" />,
     title: "Authenticity",
-    description: "We believe in telling real stories from real people, preserving the genuine essence of our culture and communities."
+    description:
+      "We believe in telling real stories from real people, preserving the genuine essence of our culture and communities.",
   },
   {
     icon: <FaAward className="text-white text-2xl" />,
     title: "Excellence",
-    description: "We strive for the highest quality in everything we do, from production to storytelling and customer service."
+    description:
+      "We strive for the highest quality in everything we do, from production to storytelling and customer service.",
   },
   {
     icon: <FaUsers className="text-white text-2xl" />,
     title: "Community First",
-    description: "Our work is centered around serving and uplifting the communities of Volta and Oti Regions."
+    description:
+      "Our work is centered around serving and uplifting the communities of Volta and Oti Regions.",
   },
   {
     icon: <FaGlobeAfrica className="text-white text-2xl" />,
     title: "Cultural Preservation",
-    description: "We are committed to documenting and preserving our cultural heritage for future generations."
+    description:
+      "We are committed to documenting and preserving our cultural heritage for future generations.",
   },
   {
     icon: <FaRocket className="text-white text-2xl" />,
     title: "Innovation",
-    description: "We embrace new technologies and creative approaches to storytelling while respecting tradition."
+    description:
+      "We embrace new technologies and creative approaches to storytelling while respecting tradition.",
   },
   {
     icon: <FaEye className="text-white text-2xl" />,
     title: "Transparency",
-    description: "We maintain open communication and honest relationships with our partners and audience."
+    description:
+      "We maintain open communication and honest relationships with our partners and audience.",
   },
 ];
 
@@ -405,19 +424,22 @@ const achievements = [
 
 const testimonials = [
   {
-    quote: "DS Online TV has revolutionized how we share our cultural stories. Their professionalism and dedication to authenticity is unmatched.",
+    quote:
+      "DS Online TV has revolutionized how we share our cultural stories. Their professionalism and dedication to authenticity is unmatched.",
     name: "Chief Togbe Agorkorli",
     initials: "TA",
     role: "Community Leader, Anlo State",
   },
   {
-    quote: "Working with DS Online TV was transformative for our festival. Their coverage reached audiences we never thought possible.",
+    quote:
+      "Working with DS Online TV was transformative for our festival. Their coverage reached audiences we never thought possible.",
     name: "Madam Abla Dzidzienyo",
     initials: "AD",
     role: "Event Organizer, Ho",
   },
   {
-    quote: "The team's commitment to quality and cultural sensitivity makes them the perfect partners for heritage documentation.",
+    quote:
+      "The team's commitment to quality and cultural sensitivity makes them the perfect partners for heritage documentation.",
     name: "Dr. Kwame Asante",
     initials: "KA",
     role: "Cultural Historian",
