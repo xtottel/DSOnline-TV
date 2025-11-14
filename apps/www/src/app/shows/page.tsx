@@ -149,7 +149,7 @@ export default function ShowsPage() {
                 )}
                 <h3 className="text-2xl font-bold mb-4 text-center">{pkg.name}</h3>
                 <div className="text-center mb-6">
-                  <span className="text-4xl font-bold text-[#cb991e]">${pkg.price}</span>
+                  <span className="text-4xl font-bold text-[#cb991e]">GHS{pkg.price}</span>
                   <span className="text-gray-400">/{pkg.duration}</span>
                 </div>
                 <ul className="space-y-4 mb-8">
