@@ -28,7 +28,7 @@ export default function Home() {
         <Container>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div className="p-6">
-              <div className="text-4xl font-bold text-[#cb991e] mb-2">50+</div>
+              <div className="text-4xl font-bold text-[#cb991e] mb-2">500+</div>
               <p className="text-gray-300">Events Covered</p>
             </div>
             <div className="p-6">

@@ -369,7 +369,7 @@ const packages = [
 // Statistics data
 const statistics = [
   {
-    value: "50K+",
+    value: "10M+",
     label: "Monthly Viewers"
   },
   {
