@@ -8,37 +8,13 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { Container } from "@/layout/Container";
+import PortfolioHero from "./PortfolioHero";
 
 export default function Portfolio() {
   return (
     <main className="bg-gray-50">
       {/* Portfolio Hero */}
-      <section className="py-20 bg-black text-white">
-        <Container>
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="text-[#cb991e]">Portfolio</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Explore our curated collection of documentaries, live events, and cultural programming that showcase the best of Volta and Oti Regions
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <button className="px-6 py-3 bg-[#cb991e] hover:bg-[#d8aa3a] text-black font-semibold rounded-lg transition-all duration-300">
-                All Projects
-              </button>
-              <button className="px-6 py-3 border border-[#cb991e] text-[#cb991e] hover:bg-[#cb991e] hover:text-black font-semibold rounded-lg transition-all duration-300">
-                Live Events
-              </button>
-              <button className="px-6 py-3 border border-[#cb991e] text-[#cb991e] hover:bg-[#cb991e] hover:text-black font-semibold rounded-lg transition-all duration-300">
-                Documentaries
-              </button>
-              <button className="px-6 py-3 border border-[#cb991e] text-[#cb991e] hover:bg-[#cb991e] hover:text-black font-semibold rounded-lg transition-all duration-300">
-                Cultural Content
-              </button>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <PortfolioHero />
 
       {/* Featured Projects */}
       <section className="py-15 bg-white">

@@ -3,49 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   FaPlayCircle,
-  FaPhotoVideo,
   FaVideo,
   FaImages,
-  FaCalendarAlt,
   FaArrowRight,
   FaFilter,
   FaExpand,
 } from "react-icons/fa";
 import { Container } from "@/layout/Container";
+import GalleryHero from "./GalleryHero";
 
 export default function Gallery() {
   return (
     <main className="bg-gray-50">
       {/* Gallery Hero */}
-      <section className="py-20 bg-black text-white">
-        <Container>
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our <span className="text-[#cb991e]">Gallery</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              A visual journey through the rich culture, vibrant events, and stunning landscapes of Volta and Oti Regions
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <button className="px-6 py-3 bg-[#cb991e] hover:bg-[#d8aa3a] text-black font-semibold rounded-lg transition-all duration-300">
-                All Media
-              </button>
-              <button className="px-6 py-3 border border-[#cb991e] text-[#cb991e] hover:bg-[#cb991e] hover:text-black font-semibold rounded-lg transition-all duration-300">
-                <FaImages className="inline mr-2" />
-                Photos
-              </button>
-              <button className="px-6 py-3 border border-[#cb991e] text-[#cb991e] hover:bg-[#cb991e] hover:text-black font-semibold rounded-lg transition-all duration-300">
-                <FaVideo className="inline mr-2" />
-                Videos
-              </button>
-              <button className="px-6 py-3 border border-[#cb991e] text-[#cb991e] hover:bg-[#cb991e] hover:text-black font-semibold rounded-lg transition-all duration-300">
-                <FaCalendarAlt className="inline mr-2" />
-                Events
-              </button>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <GalleryHero />
 
       {/* Featured Gallery */}
       <section className="py-15 bg-white">

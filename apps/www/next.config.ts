@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "cdn.sendexa.co",
+        hostname: "cdn.cloudinary.com",
         port: "",
         pathname: "/**",
       },

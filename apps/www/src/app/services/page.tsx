@@ -2,57 +2,44 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/layout/Container";
-import {  FaFilm, FaBroadcastTower, FaMicrophone,  FaPhotoVideo, FaArrowRight, FaCheckCircle } from "react-icons/fa";
+import {
+  FaFilm,
+  FaBroadcastTower,
+  FaMicrophone,
+  FaPhotoVideo,
+  FaArrowRight,
+  FaCheckCircle,
+} from "react-icons/fa";
 import { GiDeliveryDrone, GiBigDiamondRing } from "react-icons/gi";
 import { TbCoffin } from "react-icons/tb";
+import ServicesHero from "./ServicesHero";
 
 export default function Services() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
-      <section className="relative py-20 bg-black text-white">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/services-hero.jpg"
-            alt="DS Online TV Services"
-            fill
-            className="object-cover opacity-40"
-          />
-        </div>
-        <Container className="relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Our <span className="text-[#cb991e]">Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              DS Online TV offers comprehensive media solutions that celebrate and promote the rich culture, 
-              stories, and talents of the Volta and Oti Regions to a global audience.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="px-6 py-3 bg-[#cb991e] hover:bg-[#d8aa3a] text-black font-semibold rounded-lg transition-all duration-300">
-                Get in Touch
-              </Link>
-              <Link href="/portfolio" className="px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-black font-semibold rounded-lg transition-all duration-300">
-                View Our Work
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
+      {/* Header Section - Business Focused */}
+      <ServicesHero />
+      
 
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <Container>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">What We Offer</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              What We Offer
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From live event coverage to documentary production, we provide end-to-end media solutions
+              From live event coverage to documentary production, we provide
+              end-to-end media solutions
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="group bg-gray-50 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div
+                key={index}
+                className="group bg-gray-50 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-200"
+              >
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={service.image}
@@ -69,7 +56,9 @@ export default function Services() {
                   <div className="w-14 h-14 bg-[#cb991e] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
-                  <h3 className="text-2xl font-semibold text-black mb-3">{service.title}</h3>
+                  <h3 className="text-2xl font-semibold text-black mb-3">
+                    {service.title}
+                  </h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <ul className="space-y-2 mb-6">
                     {service.features.slice(0, 3).map((feature, i) => (
@@ -79,7 +68,10 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={service.link} className="inline-flex items-center text-[#cb991e] hover:text-black font-medium">
+                  <Link
+                    href={service.link}
+                    className="inline-flex items-center text-[#cb991e] hover:text-black font-medium"
+                  >
                     Learn More
                     <FaArrowRight className="ml-2 text-sm" />
                   </Link>
@@ -96,17 +88,23 @@ export default function Services() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Process</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              How we bring your vision to life with professional media production
+              How we bring your vision to life with professional media
+              production
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <div key={index} className="text-center p-6 bg-gray-900 rounded-lg">
+              <div
+                key={index}
+                className="text-center p-6 bg-gray-900 rounded-lg"
+              >
                 <div className="w-16 h-16 bg-[#cb991e] rounded-full flex items-center justify-center mx-auto mb-4 text-2xl text-black font-bold">
                   {index + 1}
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-[#cb991e]">{step.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-[#cb991e]">
+                  {step.title}
+                </h3>
                 <p className="text-gray-300">{step.description}</p>
               </div>
             ))}
@@ -118,21 +116,32 @@ export default function Services() {
       <section className="py-20 bg-white">
         <Container>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Service Packages</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+              Service Packages
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Flexible options to meet your media production needs and budget
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`p-8 rounded-lg border ${index === 1 ? 'border-[#cb991e] bg-gray-50 scale-105' : 'border-gray-200'}`}>
-                <h3 className="text-2xl font-semibold text-black mb-2">{plan.name}</h3>
+              <div
+                key={index}
+                className={`p-8 rounded-lg border ${index === 1 ? "border-[#cb991e] bg-gray-50 scale-105" : "border-gray-200"}`}
+              >
+                <h3 className="text-2xl font-semibold text-black mb-2">
+                  {plan.name}
+                </h3>
                 <p className="text-gray-600 mb-6">{plan.description}</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-black">GHS {plan.price}</span>
+                  <span className="text-4xl font-bold text-black">
+                    GHS {plan.price}
+                  </span>
                   {plan.originalPrice && (
-                    <span className="text-lg text-gray-500 line-through ml-2">GHS {plan.originalPrice}</span>
+                    <span className="text-lg text-gray-500 line-through ml-2">
+                      GHS {plan.originalPrice}
+                    </span>
                   )}
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -143,7 +152,10 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" className="block w-full text-center px-6 py-3 bg-[#cb991e] hover:bg-[#d8aa3a] text-black font-semibold rounded-lg transition-all duration-300">
+                <Link
+                  href="/contact"
+                  className="block w-full text-center px-6 py-3 bg-[#cb991e] hover:bg-[#d8aa3a] text-black font-semibold rounded-lg transition-all duration-300"
+                >
                   Get Started
                 </Link>
               </div>
@@ -156,15 +168,24 @@ export default function Services() {
       <section className="py-20 bg-gradient-to-r from-[#cb991e] to-[#e0b34e] text-black">
         <Container>
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Project?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Start Your Project?
+            </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss how we can bring your vision to life with our professional media services
+              Contact us today to discuss how we can bring your vision to life
+              with our professional media services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-3 bg-black hover:bg-gray-800 text-white font-semibold rounded-lg transition-all duration-300">
+              <Link
+                href="/contact"
+                className="px-8 py-3 bg-black hover:bg-gray-800 text-white font-semibold rounded-lg transition-all duration-300"
+              >
                 Request a Quote
               </Link>
-              <Link href="/portfolio" className="px-8 py-3 border-2 border-black text-black hover:bg-black hover:text-white font-semibold rounded-lg transition-all duration-300">
+              <Link
+                href="/portfolio"
+                className="px-8 py-3 border-2 border-black text-black hover:bg-black hover:text-white font-semibold rounded-lg transition-all duration-300"
+              >
                 View Portfolio
               </Link>
             </div>
@@ -181,22 +202,24 @@ const services = [
     icon: <FaBroadcastTower className="text-white text-2xl" />,
     title: "Live Event Streaming",
     category: "Broadcast",
-    description: "Professional live streaming of cultural events, festivals, and ceremonies.",
+    description:
+      "Professional live streaming of cultural events, festivals, and ceremonies.",
     features: [
       "Multi-camera setup",
       "4K & HD Resolution",
       "Real-time streaming",
       "Social media integration",
-      "Post-event highlights"
+      "Post-event highlights",
     ],
     image: "/live-broadcast.jpg",
-    link: "/services/live-broadcasting"
+    link: "/services/live-broadcasting",
   },
-   {
+  {
     icon: <FaPhotoVideo className="text-white text-2xl" />,
     title: "Photography Services",
     category: "Photography",
-    description: "High-quality photography for events, portraits, and commercial use.",
+    description:
+      "High-quality photography for events, portraits, and commercial use.",
     features: [
       "Photoshoot (Studio & Outdoor)",
       "Event Photography",
@@ -204,99 +227,99 @@ const services = [
       "Photo editing",
     ],
     image: "/photography-services.jpg",
-    link: "/services/photography"
+    link: "/services/photography",
   },
-   {
+  {
     icon: <GiBigDiamondRing className="text-white text-2xl" />,
     title: "Weeding Services",
     category: "Weeding",
-    description: "Comprehensive weeding videography and photography services to capture your special day.",
-    features: [
-      "Pre-weeding",
-      "Engagement Ceremony",
-      "Weeding Ceremony",
-    ],
+    description:
+      "Comprehensive weeding videography and photography services to capture your special day.",
+    features: ["Pre-weeding", "Engagement Ceremony", "Weeding Ceremony"],
     image: "/cultural-programming.jpg",
-    link: "/services/weeding"
+    link: "/services/weeding",
   },
-   //Funeral Service
+  //Funeral Service
   {
     icon: <TbCoffin className="text-white text-2xl" />,
     title: "Funeral Services",
     category: "Funeral",
-    description: "Comprehensive funeral videography and photography services to honor your loved ones.",
-    features: [
-      "Pre-funeral coverage",
-      "Funeral Ceremony",
-      "Memorial videos",
-    ],
+    description:
+      "Comprehensive funeral videography and photography services to honor your loved ones.",
+    features: ["Pre-funeral coverage", "Funeral Ceremony", "Memorial videos"],
     image: "/cultural-programming.jpg",
-    link: "/services/funeral"
+    link: "/services/funeral",
   },
   //Drone Service
   {
     icon: <GiDeliveryDrone className="text-white text-2xl" />,
     title: "Drone Services",
     category: "Drone",
-    description: "Aerial videography and photography services using state-of-the-art drone technology.",
+    description:
+      "Aerial videography and photography services using state-of-the-art drone technology.",
     features: [
       "Aerial filming",
       "High-resolution photography",
       "Cinematic shots",
     ],
     image: "/drone-videography.jpg",
-    link: "/services/drone-videography"
+    link: "/services/drone-videography",
   },
   {
     icon: <FaFilm className="text-white text-2xl" />,
     title: "Documentary Production",
     category: "Production",
-    description: "Authentic storytelling that captures the essence of Volta and Oti cultures.",
+    description:
+      "Authentic storytelling that captures the essence of Volta and Oti cultures.",
     features: [
       "Research and scripting",
       "Professional filming",
       "Cultural sensitivity",
       "Post-production editing",
-      "Distribution planning"
+      "Distribution planning",
     ],
     image: "/documentary-production.jpg",
-    link: "/services/documentaries"
+    link: "/services/documentaries",
   },
- 
- 
+
   {
     icon: <FaMicrophone className="text-white text-2xl" />,
     title: "Video / Audio Production",
     category: "Audio",
-    description: "High-quality video and audio production services for various media needs.",
+    description:
+      "High-quality video and audio production services for various media needs.",
     features: [
       "Studio recording",
       "Voiceovers",
       "On-location shoots",
-      "Mixing and mastering"
+      "Mixing and mastering",
     ],
     image: "/audio-production.jpg",
-    link: "/services/audio"
+    link: "/services/audio",
   },
 ];
 
 const processSteps = [
   {
     title: "Consultation",
-    description: "We discuss your vision, goals, and requirements to understand your project needs."
+    description:
+      "We discuss your vision, goals, and requirements to understand your project needs.",
   },
   {
     title: "Planning",
-    description: "Our team develops a detailed plan including timeline, resources, and creative approach."
+    description:
+      "Our team develops a detailed plan including timeline, resources, and creative approach.",
   },
   {
     title: "Production",
-    description: "We execute the plan with professional equipment and expertise to capture your content."
+    description:
+      "We execute the plan with professional equipment and expertise to capture your content.",
   },
   {
     title: "Delivery",
-    description: "You receive the final product, optimized for your chosen platforms and audience."
-  }
+    description:
+      "You receive the final product, optimized for your chosen platforms and audience.",
+  },
 ];
 
 const pricingPlans = [
@@ -310,8 +333,8 @@ const pricingPlans = [
       "Single camera setup",
       "Basic editing",
       "1080p resolution",
-      "1 revision"
-    ]
+      "1 revision",
+    ],
   },
   {
     name: "Professional Package",
@@ -324,8 +347,8 @@ const pricingPlans = [
       "Professional editing",
       "4K resolution available",
       "3 revisions",
-      "Drone footage (optional)"
-    ]
+      "Drone footage (optional)",
+    ],
   },
   {
     name: "Premium Package",
@@ -339,7 +362,7 @@ const pricingPlans = [
       "4K resolution",
       "Unlimited revisions",
       "Behind-the-scenes footage",
-      "Social media highlights"
-    ]
-  }
+      "Social media highlights",
+    ],
+  },
 ];
