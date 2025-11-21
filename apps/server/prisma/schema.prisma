@@ -6,3 +6,224 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String
+  role      UserRole @default(EDITOR)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  posts      Post[]
+  categories Category[]
+  media      Media[]
+  shows      Show[]
+  services   Service[]
+  portfolio  PortfolioItem[]
+
+  @@map("users")
+}
+
+model Post {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  excerpt     String?
+  content     String
+  featuredImage String?
+  status      PostStatus @default(DRAFT)
+  author      User   @relation(fields: [authorId], references: [id])
+  authorId    String
+  categories  Category[] @relation("PostCategories")
+  tags        String[]
+  readTime    Int?
+  views       Int    @default(0)
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("posts")
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  color       String?  @default("#cb991e")
+  posts       Post[]   @relation("PostCategories")
+  createdBy   User     @relation(fields: [createdById], references: [id])
+  createdById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("categories")
+}
+
+model Media {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  fileName    String
+  filePath    String
+  fileSize    Int
+  mimeType    String
+  type        MediaType
+  altText     String?
+  caption     String?
+  uploadedBy  User     @relation(fields: [uploadedById], references: [id])
+  uploadedById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("media")
+}
+
+model Show {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  description String
+  image       String
+  category    String
+  schedule    String
+  audience    String
+  host        String
+  status      ShowStatus @default(ACTIVE)
+  createdBy   User     @relation(fields: [createdById], references: [id])
+  createdById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("shows")
+}
+
+model Service {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  category    String
+  features    String[]
+  image       String
+  link        String
+  status      ServiceStatus @default(ACTIVE)
+  createdBy   User     @relation(fields: [createdById], references: [id])
+  createdById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("services")
+}
+
+model PortfolioItem {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  excerpt     String
+  category    String
+  type        PortfolioType
+  image       String
+  link        String
+  date        DateTime
+  status      PortfolioStatus @default(PUBLISHED)
+  createdBy   User     @relation(fields: [createdById], references: [id])
+  createdById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("portfolio_items")
+}
+
+model GalleryItem {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  category    String
+  location    String?
+  date        DateTime
+  image       String
+  type        GalleryType
+  status      GalleryStatus @default(PUBLISHED)
+  createdBy   User     @relation(fields: [createdById], references: [id])
+  createdById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("gallery_items")
+}
+
+model LiveStream {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  streamUrl   String
+  thumbnail   String?
+  isLive      Boolean  @default(false)
+  scheduledAt DateTime?
+  startedAt   DateTime?
+  endedAt     DateTime?
+  viewers     Int      @default(0)
+  createdBy   User     @relation(fields: [createdById], references: [id])
+  createdById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("live_streams")
+}
+
+enum UserRole {
+  ADMIN
+  EDITOR
+  VIEWER
+}
+
+enum PostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum MediaType {
+  IMAGE
+  VIDEO
+  AUDIO
+  DOCUMENT
+}
+
+enum ShowStatus {
+  ACTIVE
+  INACTIVE
+  COMING_SOON
+}
+
+enum ServiceStatus {
+  ACTIVE
+  INACTIVE
+}
+
+enum PortfolioStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum PortfolioType {
+  VIDEO
+  DOCUMENTARY
+  PHOTO
+  LIVE_EVENT
+}
+
+enum GalleryStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum GalleryType {
+  PHOTO
+  VIDEO
+}
