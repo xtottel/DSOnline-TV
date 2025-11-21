@@ -23,6 +23,8 @@ model User {
   shows      Show[]
   services   Service[]
   portfolio  PortfolioItem[]
+  gallery    GalleryItem[]
+  liveStreams LiveStream[]
 
   @@map("users")
 }

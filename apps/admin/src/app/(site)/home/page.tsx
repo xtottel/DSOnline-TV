@@ -44,6 +44,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Link from "next/link";
+import { createClient } from "@/lib/client";
+import { redirect } from "next/navigation";
+
 const messageData = [
   { name: "Jan", sent: 4000, delivered: 3800 },
   { name: "Feb", sent: 3000, delivered: 2800 },
@@ -136,7 +139,13 @@ const getStatusBadge = (status: smsHistory["status"]) => {
   );
 };
 
-export default function DashboardHome() {
+export default async function DashboardHome() {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase.auth.getClaims();
+  if (error || !data?.claims) {
+    redirect("/auth/login");
+  }
   const [currentDateTime, setCurrentDateTime] = useState<string>("");
   const router = useRouter();
 
@@ -299,7 +308,6 @@ export default function DashboardHome() {
             )}
           </CardContent>
         </Card>
-
 
         {/* Channel Distribution Pie Chart */}
         <Card className="h-[350px]">
